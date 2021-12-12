@@ -1,8 +1,8 @@
 @font-face {
-  font-family: "Bebas Neue Cyrillic";
-  src: local("Bebas Neue Cyrillic"), local("BebasNeueCyrillic"),
-    url("../fonts/BebasNeueCyrillic.woff2") format("woff2"),
-    url("../fonts/BebasNeueCyrillic.woff") format("woff");
+  font-family: "Bebas Neue Regular";
+  src: local("Bebas Neue Regular"), local("BebasNeueRegular"),
+    url("../fonts/BebasNeueRegular.woff2") format("woff2"),
+    url("../fonts/BebasNeueRegular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -77,6 +77,9 @@ body {
 .home-image path:hover {
   opacity: 1;
 }
+path.current-floor {
+  opacity: 1;
+}
 .counter-group {
   display: flex;
   flex-direction: column;
@@ -94,7 +97,7 @@ body {
   margin: 0;
   width: 800px;
   max-height: 37px;
-  font-family: "Bebas Neue Cyrillic", sans-serif;
+  font-family: "Bebas Neue Regular", sans-serif;
   font-weight: normal;
   font-size: 37px;
   line-height: 37px;
@@ -104,7 +107,7 @@ body {
 }
 
 .counter {
-  font-family: "Bebas Neue Cyrillic", sans-serif;
+  font-family: "Bebas Neue Regular", sans-serif;
   font-size: 124px;
   color: #635854;
   margin-top: 10px;
