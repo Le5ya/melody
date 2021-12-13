@@ -35,10 +35,25 @@ $(document).ready(function () {
     //alert(($('.flats path')[0].getAttribute('data-flat')))
     /*for ( flat in ){
       alert(flat.getAttribute('data-flat'))
-    }*/
+    }*/   
+ });
+  flatPath.on("click", function() {
+    currentFlat = $(this).attr("data-flat");
+    console.log(currentFlat);
+  
+    links= $('.flat-link').toArray()
+    for (i in links){
       
-    
- })
+      if(links[i].getAttribute("id") - 0 == currentFlat - 0) {
+     
+        links[i].classList.add("current-link");
+       
+      } else {
+        links[i].classList.remove("current-link");
+      }
+    }
+ 
+ });
 
   floorPath.on("click", toggleModal);
 
