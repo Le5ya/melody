@@ -3,11 +3,18 @@ $(document).ready(function () {
  var floorPath = $(".home-image path");
  var counterUp = $(".counter-up");
  var counterDown = $(".counter-down");
+ var modal = $(".modal");
+ var modalCloseButton = $(".modal-close-button");
  floorPath.on("mouseover", function () {
    currentFloor = $(this).attr("data-floor");
    floorPath.removeClass("current-floor");
    $(".counter").text(currentFloor);
  });
+
+  floorPath.on("click", toggleModal);
+
+  modalCloseButton.on("click", toggleModal);
+
  counterUp.on("click", function () {
 if(currentFloor < 18) {
   currentFloor++;
@@ -19,7 +26,7 @@ if(currentFloor < 18) {
     }
   });
  counterDown.on("click", function () {
-if(currentFloor >2) {
+if(currentFloor > 2) {
   currentFloor--;
   usCurrentFloor = currentFloor.toLocaleString("en-US", { minimumIntegerDigits: 2,
   useGroupping: false });
@@ -28,4 +35,7 @@ if(currentFloor >2) {
   $(`[data-floor=${usCurrentFloor}]`).toggleClass("current-floor");
     }
   });
+  function toggleModal() {
+    modal.toggleClass("is-open");
+  }
 });
